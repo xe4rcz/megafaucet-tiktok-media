@@ -1,0 +1,71 @@
+{
+  "campaign": "megafaucet_cis_multilang",
+  "source": "https://static.metricool.com/planner/202610/7471113-file-13111199316898970412.mp4",
+  "audio_policy": "fresh native-accent neural narration, no original audio/no time-stretch, 48kHz stereo AAC 192k, -16LUFS / -1.5dBTP",
+  "regions": {
+    "kazakhstan-kk": {
+      "lang": "kk-KZ",
+      "region": "Kazakhstan",
+      "file": "media/regional_cis/megafaucet_kazakhstan-kk.mp4",
+      "cover": "media/regional_cis/cover_kazakhstan-kk.jpg",
+      "voice_seconds": 18.05,
+      "video_seconds": 19.17,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "caption": "MegaFaucet платформасында криптокранды, тапсырмалар мен ұсыныстарды қарап шығыңыз. Төлемдер тарихын және қаражат шығару шарттарын тексеріңіз.\n🌐 mega-faucet.click\nТабысқа кепілдік берілмейді.\n#MegaFaucet #Қазақстан #Қазақша #Криптовалюта #CryptoFaucet",
+      "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=cis_multilang&utm_content=kazakhstan_kk",
+      "target_time_local": "19:30 Asia/Almaty",
+      "status": "CREATIVE_QA_REQUIRED_NOT_PUBLISHED"
+    },
+    "uzbekistan-uz": {
+      "lang": "uz-UZ",
+      "region": "Uzbekistan",
+      "file": "media/regional_cis/megafaucet_uzbekistan-uz.mp4",
+      "cover": "media/regional_cis/cover_uzbekistan-uz.jpg",
+      "voice_seconds": 18.12,
+      "video_seconds": 19.22,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "caption": "MegaFaucet platformasida kripto kran, vazifalar va takliflarni ko‘ring. To‘lovlar tarixini va pul yechish shartlarini tekshiring.\n🌐 mega-faucet.click\nDaromad kafolatlanmaydi.\n#MegaFaucet #Ozbekiston #OZbekcha #Kriptovalyuta #CryptoFaucet",
+      "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=cis_multilang&utm_content=uzbekistan_uz",
+      "target_time_local": "19:30 Asia/Tashkent",
+      "status": "CREATIVE_QA_REQUIRED_NOT_PUBLISHED"
+    },
+    "azerbaijan-az": {
+      "lang": "az-AZ",
+      "region": "Azerbaijan",
+      "file": "media/regional_cis/megafaucet_azerbaijan-az.mp4",
+      "cover": "media/regional_cis/cover_azerbaijan-az.jpg",
+      "voice_seconds": 17.04,
+      "video_seconds": 18.14,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "caption": "MegaFaucet-də kripto kranı, tapşırıqları və təklifləri araşdırın. Ödəniş tarixçəsini və pul çıxarma şərtlərini yoxlayın.\n🌐 mega-faucet.click\nQazanc zəmanətli deyil.\n#MegaFaucet #Azerbaycan #Azərbaycan #Kriptovalyuta #CryptoFaucet",
+      "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=cis_multilang&utm_content=azerbaijan_az",
+      "target_time_local": "19:30 Asia/Baku",
+      "status": "CREATIVE_QA_REQUIRED_NOT_PUBLISHED"
+    },
+    "moldova-ro": {
+      "lang": "ro-RO",
+      "region": "Moldova",
+      "file": "media/regional_cis/megafaucet_moldova-ro.mp4",
+      "cover": "media/regional_cis/cover_moldova-ro.jpg",
+      "voice_seconds": 17.9,
+      "video_seconds": 19.0,
+      "sample_rate_hz": 48000,
+      "channels": 2,
+      "video_codec": "h264",
+      "audio_codec": "aac",
+      "caption": "Descoperă MegaFaucet: activități faucet, sarcini și oferte crypto într-un singur loc. Consultă istoricul plăților și condițiile de retragere.\n🌐 mega-faucet.click\nCâștigurile nu sunt garantate.\n#MegaFaucet #Moldova #Romana #Criptomonede #CryptoFaucet",
+      "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=cis_multilang&utm_content=moldova_ro",
+      "target_time_local": "19:30 Europe/Chisinau",
+      "status": "CREATIVE_QA_REQUIRED_NOT_PUBLISHED"
+    }
+  }
+}
