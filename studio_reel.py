@@ -193,11 +193,33 @@ def captions(canvas,text):
     draw_text(d,(43,889),"Rewards are not guaranteed • Conditions apply",12,DIM,455)
 
 def say_clips(topic,work):
-    focus=topic["eyebrow"].capitalize()
+    focus_scripts = {
+        "start-here": "Start with the faucet, tasks and daily bonus sections. Check what's available.",
+        "faucet": "Check the faucet section and see when claims become available.",
+        "ptc": "Explore paid to click ads, and read the viewing requirements first.",
+        "offerwalls": "Explore offerwalls, and check the requirements of each offer.",
+        "shortlinks": "See the shortlinks section and follow its instructions.",
+        "daily-bonus": "Visit the daily bonus section and see what's available.",
+        "levels": "Explore the level system and check the current perks.",
+        "games": "Games have risks. Read the odds and play responsibly.",
+        "withdrawals": "Before withdrawing, check the method and current minimum.",
+        "no-deposit": "Free earning activities do not require a deposit. Read the terms.",
+        "referrals": "Find the referral section and check the latest commission terms.",
+        "how-it-works": "Start with faucet claims, tasks, or offerwalls. You choose.",
+        "faucet-vs-tasks": "Compare faucet claims and tasks to explore the options.",
+        "offerwall-providers": "Several offerwall partners have different conditions.",
+        "account-rules": "Follow the rules. Avoid bots, proxies, and multiple accounts.",
+        "progress": "Your account level can change the available bonuses.",
+        "lottery": "Lottery games have odds. Winning is never guaranteed.",
+        "privacy": "Keep your account safe. Never share recovery phrases.",
+        "payout-proof": "Check current payout information before deciding.",
+        "what-next": "Explore the features, check eligibility, and choose an activity."
+    }
+    focus=focus_scripts[topic["slug"]]
     lines=[
         "Crypto reward websites can offer more than just faucet claims.",
         "Meet MegaFaucet. Explore faucets, tasks and offerwalls in one place.",
-        f"Today's focus: {focus}. Explore the features and check the requirements.",
+        focus,
         "Take a closer look at mega faucet dot click. Always check the terms."
     ]
     voices=[]; length=[]
