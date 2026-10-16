@@ -1,0 +1,72 @@
+name: Remotion premium MegaFaucet preview
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "remotion/**"
+      - ".github/workflows/remotion-preview.yml"
+permissions:
+  contents: write
+concurrency:
+  group: remotion-megafaucet
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install video tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg
+          python -m pip install playwright
+          python -m playwright install --with-deps chromium
+      - name: Install Remotion
+        working-directory: remotion
+        run: npm install --no-audit --no-fund
+      - name: Capture ad-clean public site
+        working-directory: remotion
+        run: python capture.py
+      - name: Import authorized Runway narration
+        working-directory: remotion
+        env:
+          VOICE_URL: ${{ secrets.RUNWAY_VOICE_URL }}
+        run: |
+          if [ -n "$VOICE_URL" ]; then
+            curl -fsSL "$VOICE_URL" -o public/voice.mp3
+          else
+            python -m pip install edge-tts
+            edge-tts --voice en-US-AndrewNeural --text "Meet MegaFaucet. Explore faucet claims, tasks, offerwalls and games in one place. Track your progress and review payment activity. Check withdrawal options and learn what is available for you. Visit mega faucet dot click. Terms apply." --write-media public/voice.mp3
+          fi
+          ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1 public/voice.mp3
+      - name: Render 1080x1920 MP4
+        working-directory: remotion
+        run: |
+          npm run render
+          ffprobe -v error -show_entries stream=codec_name,width,height -of default=noprint_wrappers=1 out/megafaucet-remotion.mp4
+          ffmpeg -hide_banner -loglevel error -y -ss 6 -i out/megafaucet-remotion.mp4 -frames:v 1 out/megafaucet-remotion-cover.jpg
+      - name: Save unpublished preview
+        run: |
+          mkdir -p media/remotion
+          cp remotion/out/megafaucet-remotion.mp4 media/remotion/
+          cp remotion/out/megafaucet-remotion-cover.jpg media/remotion/
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/remotion
+          if ! git diff --cached --quiet; then
+            git commit -m "Create Remotion cinematic TikTok preview — not published"
+            for i in 1 2 3; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then exit 0; fi
+              sleep 4
+            done
+            exit 1
+          fi
