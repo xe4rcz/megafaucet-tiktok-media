@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
-"""Create five TikTok-ready localized edits without altering the original screenshots.
+"""Create localized platform-video edits without altering the original screenshots.
 
-Sources: the approved corrected user-screenshot MP4 from Metricool and voiceovers
-from Runway. No audio time stretching, no synthetic payment claims. No publishing.
+Source: approved corrected user-screenshot MP4. Free localized neural speech;
+no time stretching, no invented payment claims and no posting in this script.
 """
 import json, os, math, re, subprocess, sys, urllib.request
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont, features
 
 ROOT=Path(__file__).resolve().parent
-CFG=json.loads((ROOT/"regions.json").read_text(encoding="utf-8"))
+CFG=json.loads((ROOT/os.getenv("REGIONAL_CONFIG","regions.json")).read_text(encoding="utf-8"))
 TEMP=ROOT/"cache"; TEMP.mkdir(exist_ok=True)
-PUBLIC=ROOT.parent/"media/regional"; PUBLIC.mkdir(parents=True,exist_ok=True)
+PUBLIC=ROOT.parent/os.getenv("REGIONAL_OUTPUT_DIR","media/regional"); PUBLIC.mkdir(parents=True,exist_ok=True)
 VIDEO=TEMP/"source.mp4"
 VOICE_DIR=PUBLIC/"voices";VOICE_DIR.mkdir(exist_ok=True)
 W,H=1080,1920
