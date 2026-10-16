@@ -1,0 +1,60 @@
+name: Studio V3 creative preview (NO PUBLISH)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "studio_reel.py"
+      - "capture_site.py"
+      - ".github/workflows/studio-preview.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: studio-v3-preview
+  cancel-in-progress: false
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install fonts, video, browser and TTS
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-inter fonts-dejavu-core
+          python -m pip install -U pip
+          python -m pip install "numpy<3" pillow edge-tts playwright
+          python -m playwright install --with-deps chromium
+      - name: Record actual public MegaFaucet screens
+        run: python capture_site.py
+      - name: Build studio-quality creative V3 draft
+        run: python studio_reel.py --topic-index 0 --output media/studio/studio-v3-preview.mp4
+      - name: Verify actual H264 video and AAC audio
+        run: |
+          test -s media/studio/studio-v3-preview.mp4
+          ffprobe -v error -select_streams v:0 -show_entries stream=width,height,codec_name -of default=noprint_wrappers=1 media/studio/studio-v3-preview.mp4
+          ffprobe -v error -select_streams a:0 -show_entries stream=codec_name -of default=noprint_wrappers=1 media/studio/studio-v3-preview.mp4
+          ffmpeg -y -loglevel error -ss 3 -i media/studio/studio-v3-preview.mp4 -frames:v 1 media/studio/studio-v3-cover.jpg
+      - name: Commit media for editorial review (not TikTok)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/studio/
+          if ! git diff --cached --quiet; then
+            git commit -m "Render studio V3 preview (not approved for publishing)"
+            for attempt in 1 2 3; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then exit 0; fi
+              sleep 3
+            done
+            exit 1
+          fi
