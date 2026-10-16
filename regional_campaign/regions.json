@@ -25,7 +25,10 @@
       ],
       "caption": "Explore MegaFaucet 🚀 Faucet claims, tasks and offerwalls in one place. Review the public payment activity and withdrawal rules before you begin.\n🌐 mega-faucet.click\nRewards vary. Terms apply.\n#MegaFaucet #CryptoFaucet #CryptoRewards #FaucetPay #USCrypto",
       "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=regional_launch&utm_content=us_en",
-      "target_time_local": "19:30 America/New_York"
+      "target_time_local": "19:30 America/New_York",
+      "voice_name": "en-US-AvaNeural",
+      "voice_text": "MegaFaucet brings faucet claims, tasks, and offerwalls together. Explore your dashboard, review public payment activity, and check withdrawal options. Visit mega faucet dot click. Conditions apply.",
+      "voice_rate": "+3%"
     },
     "eu-en": {
       "region": "Europe (English-speaking)",
@@ -49,7 +52,10 @@
       ],
       "caption": "Discover MegaFaucet 🌍 Browse faucet claims, tasks and offers, and explore the platform before choosing an activity. Review payout conditions on the website.\n🔗 mega-faucet.click\nRewards and availability vary.\n#MegaFaucet #CryptoCommunity #CryptoFaucet #CryptoTasks #EuropeCrypto",
       "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=regional_launch&utm_content=eu_en",
-      "target_time_local": "19:30 Europe/Berlin"
+      "target_time_local": "19:30 Europe/Berlin",
+      "voice_name": "en-GB-SoniaNeural",
+      "voice_text": "Explore MegaFaucet. Find faucet claims, tasks and offerwalls in one place. Review payment activity and withdrawal information before you begin. Visit mega faucet dot click. Eligibility and rewards vary.",
+      "voice_rate": "+3%"
     },
     "in-hi": {
       "region": "India (Hindi; TikTok access restricted)",
@@ -73,7 +79,10 @@
       ],
       "caption": "मेगाफॉसेट पर फ़ॉसेट क्लेम, टास्क और ऑफ़रवॉल एक ही जगह देखें। पेमेंट रिकॉर्ड और निकासी की शर्तें ज़रूर जाँचें।\n🌐 mega-faucet.click\nकमाई की गारंटी नहीं है।\n#MegaFaucet #CryptoHindi #CryptoFaucet #HindiCrypto #CryptoIndia",
       "landing_url": "https://mega-faucet.click/?utm_source=shorts&utm_medium=organic&utm_campaign=regional_launch&utm_content=in_hi",
-      "target_time_local": "19:30 Asia/Kolkata"
+      "target_time_local": "19:30 Asia/Kolkata",
+      "voice_name": "hi-IN-SwaraNeural",
+      "voice_text": "मेगाफॉसेट पर फ़ॉसेट क्लेम, टास्क और ऑफ़रवॉल एक ही जगह देखें। अपना डैशबोर्ड और भुगतान की जानकारी जाँचें। निकासी के नियम ज़रूर पढ़ें। वेबसाइट है मेगा फॉसेट डॉट क्लिक। कमाई की गारंटी नहीं है।",
+      "voice_rate": "+3%"
     },
     "pk-ur": {
       "region": "Pakistan",
@@ -97,7 +106,10 @@
       ],
       "caption": "میگا فاسٹ پر فاسٹ کلیمز، ٹاسکس اور آفر والز دیکھیں۔ ادائیگیوں کی تفصیل اور رقم نکلوانے کی شرائط ضرور چیک کریں۔\n🌐 mega-faucet.click\nآمدنی کی ضمانت نہیں۔\n#MegaFaucet #CryptoPakistan #UrduCrypto #CryptoFaucet #CryptoRewards",
       "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=regional_launch&utm_content=pk_ur",
-      "target_time_local": "19:30 Asia/Karachi"
+      "target_time_local": "19:30 Asia/Karachi",
+      "voice_name": "ur-PK-UzmaNeural",
+      "voice_text": "میگا فاسٹ پر فاسٹ کلیمز، ٹاسکس اور آفر والز ایک ہی جگہ دیکھیں۔ اپنے ڈیش بورڈ اور ادائیگیوں کی معلومات چیک کریں۔ رقم نکلوانے کی شرائط ضرور پڑھیں۔ ویب سائٹ ہے میگا فاسٹ ڈاٹ کلک۔ آمدنی کی ضمانت نہیں۔",
+      "voice_rate": "+3%"
     },
     "cis-ru": {
       "region": "Russian-speaking audience outside restricted regions",
@@ -121,7 +133,10 @@
       ],
       "caption": "MegaFaucet: криптокран, задания и офферволлы в одном месте. Посмотрите историю выплат и условия вывода до начала работы.\n🔗 mega-faucet.click\nДоход не гарантирован.\n#MegaFaucet #Криптокран #Криптовалюта #ЗаработокКриптовалюты #CryptoFaucet",
       "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=regional_launch&utm_content=cis_ru",
-      "target_time_local": "19:30 Europe/Kyiv"
+      "target_time_local": "19:30 Europe/Kyiv",
+      "voice_name": "ru-RU-SvetlanaNeural",
+      "voice_text": "МегаФаусет объединяет криптокран, задания и офферволлы на одной платформе. Посмотрите личный кабинет, историю выплат и условия вывода. Заходите на мега дефис фаусет точка клик. Условия и награды могут отличаться.",
+      "voice_rate": "+3%"
     }
   }
 }
