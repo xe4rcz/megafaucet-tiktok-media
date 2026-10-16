@@ -18,7 +18,9 @@ def check(path):
     if (a['codec_name'],int(a['sample_rate']),a['channels'])!=('aac',48000,2):issues.append('audio format')
     if abs(float(v['duration'])-float(a['duration']))>.08:issues.append('AV duration mismatch')
     run(['-v','error','-xerror','-i',str(path),'-f','null','-'])
-    decoded=run(['-v','error','-i',str(path),'-map','0:a','-ac','1','-ar','48000','-f','f32le','-']).stdout
+    # Inspect original stereo channels. A mono downmix can add ~3 dB to
+    # correlated speech and would incorrectly report clipping absent in the file.
+    decoded=run(['-v','error','-i',str(path),'-map','0:a','-ac','2','-ar','48000','-f','f32le','-']).stdout
     samples=np.frombuffer(decoded,dtype='<f4')
     if not np.isfinite(samples).all():issues.append('non-finite PCM')
     clip=int(np.count_nonzero(abs(samples)>=1))
@@ -37,3 +39,4 @@ if __name__=='__main__':
         report=check(f);reports.append(report);print(f.name,report['technical_pass'],report['issues'],flush=True)
     args.output.write_text(json.dumps(reports,ensure_ascii=False,indent=2))
     if any(not r['technical_pass'] for r in reports):raise SystemExit(1)
+

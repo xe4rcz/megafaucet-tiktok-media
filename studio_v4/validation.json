@@ -1,0 +1,218 @@
+[
+  {
+    "file": "megafaucet_v4_azerbaijan-az.mp4",
+    "sha256": "4e348f6b8549b7b744289d486b62327ef9c03e246238e3259051841a4e51c7b3",
+    "technical_pass": true,
+    "issues": [],
+    "video": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30.0,
+      "duration": 18.066667
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -15.97,
+      "true_peak_dbtp": -1.5,
+      "pcm_clipped_samples": 0
+    },
+    "full_decode": "PASS",
+    "visual_review": "REQUIRED",
+    "naturalness_and_local_language_review": "REQUIRED",
+    "publication_approved": false
+  },
+  {
+    "file": "megafaucet_v4_cis-ru.mp4",
+    "sha256": "765e62261262a7d3c90f1b1a24a4ebc9ba99340485e412e23253147ea4aede88",
+    "technical_pass": true,
+    "issues": [],
+    "video": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30.0,
+      "duration": 18.033333
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -16.01,
+      "true_peak_dbtp": -3.21,
+      "pcm_clipped_samples": 0
+    },
+    "full_decode": "PASS",
+    "visual_review": "REQUIRED",
+    "naturalness_and_local_language_review": "REQUIRED",
+    "publication_approved": false
+  },
+  {
+    "file": "megafaucet_v4_eu-en.mp4",
+    "sha256": "6f3f040303e63682e9a214ca6fdac05ffcf58b666fcff03363762df3eda29be0",
+    "technical_pass": true,
+    "issues": [],
+    "video": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30.0,
+      "duration": 16.666667
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -16.01,
+      "true_peak_dbtp": -3.57,
+      "pcm_clipped_samples": 0
+    },
+    "full_decode": "PASS",
+    "visual_review": "REQUIRED",
+    "naturalness_and_local_language_review": "REQUIRED",
+    "publication_approved": false
+  },
+  {
+    "file": "megafaucet_v4_in-hi.mp4",
+    "sha256": "40b4d645db2d236abdec5a77f2c5aac9dd72f266692f73cf9ba335e579e0815b",
+    "technical_pass": true,
+    "issues": [],
+    "video": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30.0,
+      "duration": 19.866667
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -16.01,
+      "true_peak_dbtp": -1.83,
+      "pcm_clipped_samples": 0
+    },
+    "full_decode": "PASS",
+    "visual_review": "REQUIRED",
+    "naturalness_and_local_language_review": "REQUIRED",
+    "publication_approved": false
+  },
+  {
+    "file": "megafaucet_v4_kazakhstan-kk.mp4",
+    "sha256": "3f5be2b63644ddf54b649d71d372081eecdd6cc945777f7c4f3b8c670e08a3bc",
+    "technical_pass": true,
+    "issues": [],
+    "video": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30.0,
+      "duration": 19.066667
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -16.09,
+      "true_peak_dbtp": -1.48,
+      "pcm_clipped_samples": 0
+    },
+    "full_decode": "PASS",
+    "visual_review": "REQUIRED",
+    "naturalness_and_local_language_review": "REQUIRED",
+    "publication_approved": false
+  },
+  {
+    "file": "megafaucet_v4_moldova-ro.mp4",
+    "sha256": "cc9bb3a1d8fa6cc35d0b7cedecf24ec8561dcd39b7fdff062a363c3ad847becc",
+    "technical_pass": true,
+    "issues": [],
+    "video": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30.0,
+      "duration": 18.933333
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -16.03,
+      "true_peak_dbtp": -3.05,
+      "pcm_clipped_samples": 0
+    },
+    "full_decode": "PASS",
+    "visual_review": "REQUIRED",
+    "naturalness_and_local_language_review": "REQUIRED",
+    "publication_approved": false
+  },
+  {
+    "file": "megafaucet_v4_pk-ur.mp4",
+    "sha256": "384896a945b1528ef28c675592bbf1b65c34c7571c87c00bdf8a85436ed62467",
+    "technical_pass": true,
+    "issues": [],
+    "video": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30.0,
+      "duration": 17.266667
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -15.85,
+      "true_peak_dbtp": -2.74,
+      "pcm_clipped_samples": 0
+    },
+    "full_decode": "PASS",
+    "visual_review": "REQUIRED",
+    "naturalness_and_local_language_review": "REQUIRED",
+    "publication_approved": false
+  },
+  {
+    "file": "megafaucet_v4_us-en.mp4",
+    "sha256": "b12001f63b656626aea9655c3cb09ab991c2376f8e04d2e2cf2975ba2c0d943a",
+    "technical_pass": true,
+    "issues": [],
+    "video": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30.0,
+      "duration": 14.766667
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -16.03,
+      "true_peak_dbtp": -1.61,
+      "pcm_clipped_samples": 0
+    },
+    "full_decode": "PASS",
+    "visual_review": "REQUIRED",
+    "naturalness_and_local_language_review": "REQUIRED",
+    "publication_approved": false
+  },
+  {
+    "file": "megafaucet_v4_uzbekistan-uz.mp4",
+    "sha256": "ab2379ca26faa29e7394c30c09d8c384e53e7caa2ef918e2141d6c784a13eba2",
+    "technical_pass": true,
+    "issues": [],
+    "video": {
+      "width": 1080,
+      "height": 1920,
+      "fps": 30.0,
+      "duration": 19.133333
+    },
+    "audio": {
+      "codec": "aac",
+      "sample_rate": 48000,
+      "channels": 2,
+      "integrated_lufs": -16.2,
+      "true_peak_dbtp": -1.51,
+      "pcm_clipped_samples": 0
+    },
+    "full_decode": "PASS",
+    "visual_review": "REQUIRED",
+    "naturalness_and_local_language_review": "REQUIRED",
+    "publication_approved": false
+  }
+]
