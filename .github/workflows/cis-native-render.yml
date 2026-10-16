@@ -1,0 +1,61 @@
+name: Render CIS native-language MegaFaucet videos
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "regional_campaign/cis_languages.json"
+      - ".github/workflows/cis-native-render.yml"
+permissions:
+  contents: write
+concurrency:
+  group: megafaucet-cis-languages
+  cancel-in-progress: false
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install free codecs, speech and international fonts
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg fonts-noto-core fonts-noto-extra
+          python -m pip install --no-cache-dir 'pillow>=10,<12' edge-tts
+      - name: Generate and package 4 additional regional videos
+        env:
+          REGIONAL_CONFIG: "cis_languages.json"
+          REGIONAL_OUTPUT_DIR: "media/regional_cis"
+        run: python regional_campaign/build.py
+      - name: Validate exports
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          m=json.loads(pathlib.Path("media/regional_cis/campaign_manifest.json").read_text(encoding="utf-8"))
+          assert len(m['regions'])==4
+          for name,x in m['regions'].items():
+              path=pathlib.Path(x['file'])
+              assert path.exists() and path.stat().st_size>450000
+              assert x['sample_rate_hz']==48000 and x['channels']==2
+              assert x['video_codec']=='h264' and x['audio_codec']=='aac'
+              assert x['video_seconds']>x['voice_seconds']
+              print("QA PASS",name,x['lang'],x['video_seconds'],path.stat().st_size)
+          print("No posting in GitHub Actions.")
+          PY
+      - name: Upload localization masters to GitHub
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/regional_cis/
+          if ! git diff --cached --quiet; then
+            git commit -m "Add 4 additional free national-language TikTok masters"
+            for i in 1 2 3 4; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then exit 0; fi
+              sleep 5
+            done
+            exit 1
+          fi
