@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "output": "media/studio/studio-v3-preview.mp4",
+    "size_bytes": 1078152,
+    "seconds": 20.57,
+    "audio": "neural en-US-AndrewNeural",
+    "resolution": "1080x1920",
+    "creative": "STUDIO_V3_DRAFT_REVIEW"
+  },
+  "voice_scripts": [
+    "Crypto reward websites can offer more than just faucet claims.",
+    "Meet MegaFaucet. Explore faucets, tasks and offerwalls in one place.",
+    "Today's focus: New to crypto faucets?. Explore the features and check the requirements.",
+    "Take a closer look at mega faucet dot click. Always check the terms."
+  ],
+  "topic": {
+    "slug": "start-here",
+    "eyebrow": "NEW TO CRYPTO FAUCETS?",
+    "headline": "Start here.",
+    "detail": "Faucet, tasks and daily bonuses in one place.",
+    "voice": "Curious about crypto reward sites? MegaFaucet brings together faucet claims, tasks, and daily bonuses. Here is a quick look at the public website."
+  }
+}
