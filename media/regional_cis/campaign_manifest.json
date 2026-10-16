@@ -17,7 +17,11 @@
       "caption": "MegaFaucet платформасында криптокранды, тапсырмалар мен ұсыныстарды қарап шығыңыз. Төлемдер тарихын және қаражат шығару шарттарын тексеріңіз.\n🌐 mega-faucet.click\nТабысқа кепілдік берілмейді.\n#MegaFaucet #Қазақстан #Қазақша #Криптовалюта #CryptoFaucet",
       "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=cis_multilang&utm_content=kazakhstan_kk",
       "target_time_local": "19:30 Asia/Almaty",
-      "status": "CREATIVE_QA_REQUIRED_NOT_PUBLISHED"
+      "status": "SCHEDULED_PUBLIC_AUTOPUBLISH_PENDING",
+      "metricool_id": 398186773,
+      "metricool_uuid": "7693147219501928350",
+      "scheduled_date_metricool": "2026-10-27T17:30:00+03:00",
+      "planner_url": "https://app.metricool.com/planner/calendar?blogId=7471113&openWithPostUuid=7693147219501928350"
     },
     "uzbekistan-uz": {
       "lang": "uz-UZ",
@@ -33,7 +37,11 @@
       "caption": "MegaFaucet platformasida kripto kran, vazifalar va takliflarni ko‘ring. To‘lovlar tarixini va pul yechish shartlarini tekshiring.\n🌐 mega-faucet.click\nDaromad kafolatlanmaydi.\n#MegaFaucet #Ozbekiston #OZbekcha #Kriptovalyuta #CryptoFaucet",
       "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=cis_multilang&utm_content=uzbekistan_uz",
       "target_time_local": "19:30 Asia/Tashkent",
-      "status": "CREATIVE_QA_REQUIRED_NOT_PUBLISHED"
+      "status": "SCHEDULED_PUBLIC_AUTOPUBLISH_PENDING",
+      "metricool_id": 398186795,
+      "metricool_uuid": "3738546571039361258",
+      "scheduled_date_metricool": "2026-10-29T17:30:00+03:00",
+      "planner_url": "https://app.metricool.com/planner/calendar?blogId=7471113&openWithPostUuid=3738546571039361258"
     },
     "azerbaijan-az": {
       "lang": "az-AZ",
@@ -49,7 +57,11 @@
       "caption": "MegaFaucet-də kripto kranı, tapşırıqları və təklifləri araşdırın. Ödəniş tarixçəsini və pul çıxarma şərtlərini yoxlayın.\n🌐 mega-faucet.click\nQazanc zəmanətli deyil.\n#MegaFaucet #Azerbaycan #Azərbaycan #Kriptovalyuta #CryptoFaucet",
       "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=cis_multilang&utm_content=azerbaijan_az",
       "target_time_local": "19:30 Asia/Baku",
-      "status": "CREATIVE_QA_REQUIRED_NOT_PUBLISHED"
+      "status": "SCHEDULED_PUBLIC_AUTOPUBLISH_PENDING",
+      "metricool_id": 398186810,
+      "metricool_uuid": "-7474759833795866972",
+      "scheduled_date_metricool": "2026-10-31T18:30:00+03:00",
+      "planner_url": "https://app.metricool.com/planner/calendar?blogId=7471113&openWithPostUuid=-7474759833795866972"
     },
     "moldova-ro": {
       "lang": "ro-RO",
@@ -57,7 +69,7 @@
       "file": "media/regional_cis/megafaucet_moldova-ro.mp4",
       "cover": "media/regional_cis/cover_moldova-ro.jpg",
       "voice_seconds": 17.9,
-      "video_seconds": 19.0,
+      "video_seconds": 19,
       "sample_rate_hz": 48000,
       "channels": 2,
       "video_codec": "h264",
@@ -65,7 +77,11 @@
       "caption": "Descoperă MegaFaucet: activități faucet, sarcini și oferte crypto într-un singur loc. Consultă istoricul plăților și condițiile de retragere.\n🌐 mega-faucet.click\nCâștigurile nu sunt garantate.\n#MegaFaucet #Moldova #Romana #Criptomonede #CryptoFaucet",
       "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=cis_multilang&utm_content=moldova_ro",
       "target_time_local": "19:30 Europe/Chisinau",
-      "status": "CREATIVE_QA_REQUIRED_NOT_PUBLISHED"
+      "status": "SCHEDULED_PUBLIC_AUTOPUBLISH_PENDING",
+      "metricool_id": 398186826,
+      "metricool_uuid": "-5549934827943540200",
+      "scheduled_date_metricool": "2026-11-02T20:30:00+03:00",
+      "planner_url": "https://app.metricool.com/planner/calendar?blogId=7471113&openWithPostUuid=-5549934827943540200"
     }
   }
 }
