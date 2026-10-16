@@ -1,0 +1,127 @@
+{
+  "campaign": "megafaucet_localized_launch",
+  "source_video": "https://static.metricool.com/planner/202610/7471113-file-13111199316898970412.mp4",
+  "disclaimer": "Rewards vary; terms apply",
+  "regions": {
+    "us-en": {
+      "region": "United States",
+      "language": "en-US",
+      "title": "MEGAFAUCET • US",
+      "headlines": [
+        "DISCOVER MEGAFAUCET",
+        "PUBLIC PAYMENTS",
+        "YOUR DASHBOARD",
+        "TASKS & OFFERS",
+        "WITHDRAWAL OPTIONS",
+        "EXPLORE TODAY"
+      ],
+      "subtitles": [
+        "Explore crypto reward activities.",
+        "Review available payment records.",
+        "See your rewards and progress.",
+        "Compare available offer providers.",
+        "Check current payout rules.",
+        "mega-faucet.click"
+      ],
+      "caption": "Explore MegaFaucet 🚀 Faucet claims, tasks and offerwalls in one place. Review the public payment activity and withdrawal rules before you begin.\n🌐 mega-faucet.click\nRewards vary. Terms apply.\n#MegaFaucet #CryptoFaucet #CryptoRewards #FaucetPay #USCrypto",
+      "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=regional_launch&utm_content=us_en",
+      "target_time_local": "19:30 America/New_York"
+    },
+    "eu-en": {
+      "region": "Europe (English-speaking)",
+      "language": "en-GB",
+      "title": "MEGAFAUCET • EUROPE",
+      "headlines": [
+        "EXPLORE MEGAFAUCET",
+        "PAYMENT HISTORY",
+        "YOUR DASHBOARD",
+        "TASKS & OFFERS",
+        "WITHDRAWAL INFO",
+        "TAKE A CLOSER LOOK"
+      ],
+      "subtitles": [
+        "Faucet claims, tasks and offerwalls.",
+        "View public payment activity.",
+        "Explore your account overview.",
+        "See offer requirements.",
+        "Read the current conditions.",
+        "mega-faucet.click"
+      ],
+      "caption": "Discover MegaFaucet 🌍 Browse faucet claims, tasks and offers, and explore the platform before choosing an activity. Review payout conditions on the website.\n🔗 mega-faucet.click\nRewards and availability vary.\n#MegaFaucet #CryptoCommunity #CryptoFaucet #CryptoTasks #EuropeCrypto",
+      "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=regional_launch&utm_content=eu_en",
+      "target_time_local": "19:30 Europe/Berlin"
+    },
+    "in-hi": {
+      "region": "India (Hindi; TikTok access restricted)",
+      "language": "hi-IN",
+      "title": "मेगाफॉसेट • हिंदी",
+      "headlines": [
+        "क्रिप्टो रिवॉर्ड्स",
+        "पेमेंट रिकॉर्ड",
+        "आपका डैशबोर्ड",
+        "टास्क और ऑफ़र",
+        "निकासी की जानकारी",
+        "वेबसाइट पर जाएँ"
+      ],
+      "subtitles": [
+        "फ़ॉसेट, टास्क और ऑफ़रवॉल देखें।",
+        "उपलब्ध भुगतान रिकॉर्ड जाँचें।",
+        "प्रगति और बैलेंस की जानकारी।",
+        "अलग-अलग ऑफ़र देखें।",
+        "निकासी के नियम पढ़ें।",
+        "mega-faucet.click"
+      ],
+      "caption": "मेगाफॉसेट पर फ़ॉसेट क्लेम, टास्क और ऑफ़रवॉल एक ही जगह देखें। पेमेंट रिकॉर्ड और निकासी की शर्तें ज़रूर जाँचें।\n🌐 mega-faucet.click\nकमाई की गारंटी नहीं है।\n#MegaFaucet #CryptoHindi #CryptoFaucet #HindiCrypto #CryptoIndia",
+      "landing_url": "https://mega-faucet.click/?utm_source=shorts&utm_medium=organic&utm_campaign=regional_launch&utm_content=in_hi",
+      "target_time_local": "19:30 Asia/Kolkata"
+    },
+    "pk-ur": {
+      "region": "Pakistan",
+      "language": "ur-PK",
+      "title": "میگا فاسٹ • اردو",
+      "headlines": [
+        "کرپٹو ریوارڈز",
+        "ادائیگیوں کا ریکارڈ",
+        "آپ کا ڈیش بورڈ",
+        "ٹاسکس اور آفرز",
+        "رقم نکلوانے کی شرائط",
+        "ویب سائٹ دیکھیں"
+      ],
+      "subtitles": [
+        "کلیمز اور آفر والز ایک ہی جگہ۔",
+        "ادائیگیوں کی معلومات دیکھیں۔",
+        "اپنی پیش رفت چیک کریں۔",
+        "دستیاب آفرز دریافت کریں۔",
+        "پہلے شرائط پڑھیں۔",
+        "mega-faucet.click"
+      ],
+      "caption": "میگا فاسٹ پر فاسٹ کلیمز، ٹاسکس اور آفر والز دیکھیں۔ ادائیگیوں کی تفصیل اور رقم نکلوانے کی شرائط ضرور چیک کریں۔\n🌐 mega-faucet.click\nآمدنی کی ضمانت نہیں۔\n#MegaFaucet #CryptoPakistan #UrduCrypto #CryptoFaucet #CryptoRewards",
+      "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=regional_launch&utm_content=pk_ur",
+      "target_time_local": "19:30 Asia/Karachi"
+    },
+    "cis-ru": {
+      "region": "Russian-speaking audience outside restricted regions",
+      "language": "ru-RU",
+      "title": "MEGAFAUCET • РУССКИЙ",
+      "headlines": [
+        "КРИПТОНАГРАДЫ",
+        "ИСТОРИЯ ВЫПЛАТ",
+        "ЛИЧНЫЙ КАБИНЕТ",
+        "ЗАДАНИЯ И ОФФЕРЫ",
+        "УСЛОВИЯ ВЫВОДА",
+        "ПОСЕТИТЕ САЙТ"
+      ],
+      "subtitles": [
+        "Кран, задания и офферволлы.",
+        "Проверяйте историю выплат.",
+        "Следите за прогрессом.",
+        "Выбирайте доступные предложения.",
+        "Читайте условия заранее.",
+        "mega-faucet.click"
+      ],
+      "caption": "MegaFaucet: криптокран, задания и офферволлы в одном месте. Посмотрите историю выплат и условия вывода до начала работы.\n🔗 mega-faucet.click\nДоход не гарантирован.\n#MegaFaucet #Криптокран #Криптовалюта #ЗаработокКриптовалюты #CryptoFaucet",
+      "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=regional_launch&utm_content=cis_ru",
+      "target_time_local": "19:30 Europe/Kyiv"
+    }
+  }
+}
