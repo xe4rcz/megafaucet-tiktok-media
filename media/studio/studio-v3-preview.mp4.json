@@ -1,8 +1,8 @@
 {
   "metadata": {
     "output": "media/studio/studio-v3-preview.mp4",
-    "size_bytes": 1078152,
-    "seconds": 20.57,
+    "size_bytes": 999217,
+    "seconds": 19.85,
     "audio": "neural en-US-AndrewNeural",
     "resolution": "1080x1920",
     "creative": "STUDIO_V3_DRAFT_REVIEW"
@@ -10,7 +10,7 @@
   "voice_scripts": [
     "Crypto reward websites can offer more than just faucet claims.",
     "Meet MegaFaucet. Explore faucets, tasks and offerwalls in one place.",
-    "Today's focus: New to crypto faucets?. Explore the features and check the requirements.",
+    "Start with the faucet, tasks and daily bonus sections. Check what's available.",
     "Take a closer look at mega faucet dot click. Always check the terms."
   ],
   "topic": {
