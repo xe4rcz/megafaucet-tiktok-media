@@ -1,0 +1,98 @@
+name: Produce narrated TikTok drafts (REAL SITE)
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Weekdays, about 09:10 / 10:10 Kyiv depending on DST.
+    - cron: "10 7 * * 1-5"
+  push:
+    branches: [main]
+    paths:
+      - "reel_v2.py"
+      - "capture_site.py"
+      - "content/topics.json"
+      - ".github/workflows/daily-drafts.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: megafaucet-narrated-draft
+  cancel-in-progress: false
+
+jobs:
+  render-draft:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Check monthly allowance and avoid duplicate
+        id: limit
+        shell: bash
+        run: |
+          DATE=$(TZ=Europe/Kyiv date +%Y-%m-%d)
+          MONTH="${DATE:0:7}"
+          mkdir -p media/drafts media/covers
+          COUNT=$(find media/drafts -maxdepth 1 -name "${MONTH}-*.mp4" -type f | wc -l)
+          if [ "$COUNT" -ge 20 ] || find media/drafts -maxdepth 1 -name "${DATE}-*.mp4" -type f | grep -q .; then
+            echo "build=false" >> "$GITHUB_OUTPUT"
+            echo "Limit or already generated: ${COUNT} / 20"
+          else
+            echo "build=true" >> "$GITHUB_OUTPUT"
+            echo "date=${DATE}" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Install dependencies
+        if: steps.limit.outputs.build == 'true'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+          python -m pip install --upgrade pip
+          python -m pip install "numpy<3" pillow edge-tts playwright
+          python -m playwright install --with-deps chromium
+      - name: Capture authentic public mobile website
+        if: steps.limit.outputs.build == 'true'
+        run: python capture_site.py
+      - name: Render neural-voice motion-video draft
+        if: steps.limit.outputs.build == 'true'
+        run: python reel_v2.py --date "${{ steps.limit.outputs.date }}"
+      - name: Check MP4 video and audio streams
+        if: steps.limit.outputs.build == 'true'
+        id: verify
+        shell: bash
+        run: |
+          VIDEO=$(find media/drafts -maxdepth 1 -name "${{ steps.limit.outputs.date }}-*.mp4" -type f | head -1)
+          test -n "$VIDEO" && test -s "$VIDEO"
+          ffprobe -v error -select_streams v:0 -show_entries stream=width,height,codec_name -of default=noprint_wrappers=1 "$VIDEO"
+          ffprobe -v error -select_streams a:0 -show_entries stream=codec_name -of default=noprint_wrappers=1 "$VIDEO"
+          ffprobe -v error -select_streams a:0 -show_entries stream=codec_name -of csv=p=0 "$VIDEO" | grep -q aac
+          ffmpeg -y -loglevel error -ss 1 -i "$VIDEO" -frames:v 1 "media/covers/${{ steps.limit.outputs.date }}.jpg"
+          echo "file=$VIDEO" >> "$GITHUB_OUTPUT"
+      - name: Update newest draft manifest
+        if: steps.limit.outputs.build == 'true'
+        shell: bash
+        env:
+          VIDEO: ${{ steps.verify.outputs.file }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          path=Path(os.environ["VIDEO"])
+          latest={"date":path.name[:10],"file":str(path),"video_url":"https://raw.githubusercontent.com/xe4rcz/megafaucet-tiktok-media/main/"+str(path),"status":"DRAFT_REQUIRES_CREATIVE_REVIEW","auto_published":False}
+          Path("media/latest.json").write_text(json.dumps(latest,indent=2)+"\n",encoding="utf-8")
+          print(json.dumps(latest))
+          PY
+      - name: Commit produced files into public media repository
+        if: steps.limit.outputs.build == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/drafts media/covers media/latest.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate narrated website-video draft ${{ steps.limit.outputs.date }}"
+            git push
+          fi
