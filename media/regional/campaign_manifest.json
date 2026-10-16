@@ -17,11 +17,7 @@
       "caption": "Explore MegaFaucet 🚀 Faucet claims, tasks and offerwalls in one place. Review the public payment activity and withdrawal rules before you begin.\n🌐 mega-faucet.click\nRewards vary. Terms apply.\n#MegaFaucet #CryptoFaucet #CryptoRewards #FaucetPay #USCrypto",
       "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=regional_launch&utm_content=us_en",
       "target_time_local": "19:30 America/New_York",
-      "status": "SCHEDULED_PUBLIC_AUTOPUBLISH_PENDING",
-      "scheduled_date_metricool": "2026-10-19T02:30:00+03:00",
-      "metricool_id": 398182351,
-      "metricool_uuid": "-3323765673896358221",
-      "planner_url": "https://app.metricool.com/planner/calendar?blogId=7471113&openWithPostUuid=-3323765673896358221"
+      "status": "CREATIVE_QA_REQUIRED_NOT_PUBLISHED"
     },
     "eu-en": {
       "lang": "en-GB",
@@ -37,11 +33,7 @@
       "caption": "Discover MegaFaucet 🌍 Browse faucet claims, tasks and offers, and explore the platform before choosing an activity. Review payout conditions on the website.\n🔗 mega-faucet.click\nRewards and availability vary.\n#MegaFaucet #CryptoCommunity #CryptoFaucet #CryptoTasks #EuropeCrypto",
       "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=regional_launch&utm_content=eu_en",
       "target_time_local": "19:30 Europe/Berlin",
-      "status": "SCHEDULED_PUBLIC_AUTOPUBLISH_PENDING",
-      "scheduled_date_metricool": "2026-10-20T20:30:00+03:00",
-      "metricool_id": 398182370,
-      "metricool_uuid": "-3024269421301316682",
-      "planner_url": "https://app.metricool.com/planner/calendar?blogId=7471113&openWithPostUuid=-3024269421301316682"
+      "status": "CREATIVE_QA_REQUIRED_NOT_PUBLISHED"
     },
     "in-hi": {
       "lang": "hi-IN",
@@ -57,10 +49,7 @@
       "caption": "मेगाफॉसेट पर फ़ॉसेट क्लेम, टास्क और ऑफ़रवॉल एक ही जगह देखें। पेमेंट रिकॉर्ड और निकासी की शर्तें ज़रूर जाँचें।\n🌐 mega-faucet.click\nकमाई की गारंटी नहीं है।\n#MegaFaucet #CryptoHindi #CryptoFaucet #HindiCrypto #CryptoIndia",
       "landing_url": "https://mega-faucet.click/?utm_source=shorts&utm_medium=organic&utm_campaign=regional_launch&utm_content=in_hi",
       "target_time_local": "19:30 Asia/Kolkata",
-      "status": "PRIVATE_DRAFT_ONLY_IN_TIKTOK_NO_INDIA_TARGETING",
-      "metricool_id": 398182479,
-      "metricool_uuid": "-7015503799230906114",
-      "planner_url": "https://app.metricool.com/planner/calendar?blogId=7471113&openWithPostUuid=-7015503799230906114"
+      "status": "CREATIVE_QA_REQUIRED_NOT_PUBLISHED"
     },
     "pk-ur": {
       "lang": "ur-PK",
@@ -76,11 +65,7 @@
       "caption": "میگا فاسٹ پر فاسٹ کلیمز، ٹاسکس اور آفر والز دیکھیں۔ ادائیگیوں کی تفصیل اور رقم نکلوانے کی شرائط ضرور چیک کریں۔\n🌐 mega-faucet.click\nآمدنی کی ضمانت نہیں۔\n#MegaFaucet #CryptoPakistan #UrduCrypto #CryptoFaucet #CryptoRewards",
       "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=regional_launch&utm_content=pk_ur",
       "target_time_local": "19:30 Asia/Karachi",
-      "status": "SCHEDULED_PUBLIC_AUTOPUBLISH_PENDING",
-      "scheduled_date_metricool": "2026-10-22T17:30:00+03:00",
-      "metricool_id": 398182389,
-      "metricool_uuid": "-8083817756754032927",
-      "planner_url": "https://app.metricool.com/planner/calendar?blogId=7471113&openWithPostUuid=-8083817756754032927"
+      "status": "CREATIVE_QA_REQUIRED_NOT_PUBLISHED"
     },
     "cis-ru": {
       "lang": "ru-RU",
@@ -96,18 +81,7 @@
       "caption": "MegaFaucet: криптокран, задания и офферволлы в одном месте. Посмотрите историю выплат и условия вывода до начала работы.\n🔗 mega-faucet.click\nДоход не гарантирован.\n#MegaFaucet #Криптокран #Криптовалюта #ЗаработокКриптовалюты #CryptoFaucet",
       "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=regional_launch&utm_content=cis_ru",
       "target_time_local": "19:30 Europe/Kyiv",
-      "status": "SCHEDULED_PUBLIC_AUTOPUBLISH_PENDING",
-      "scheduled_date_metricool": "2026-10-24T19:30:00+03:00",
-      "metricool_id": 398182403,
-      "metricool_uuid": "-3800596530139675379",
-      "planner_url": "https://app.metricool.com/planner/calendar?blogId=7471113&openWithPostUuid=-3800596530139675379"
+      "status": "CREATIVE_QA_REQUIRED_NOT_PUBLISHED"
     }
-  },
-  "scheduled_via": "Metricool brand 7471113 → TikTok @caesar_2111",
-  "notes": [
-    "TikTok remains blocked in India; do not claim India reach from TikTok.",
-    "TikTok organic posts are not manually geotargeted by language or hashtags.",
-    "UTM links in this manifest are planning links; conversion attribution needs a live clickable link/profile and site analytics.",
-    "Each audio mix is mastered to stereo 48kHz AAC; TikTok re-encoding and pronunciation quality must still be checked postpublication."
-  ]
+  }
 }
