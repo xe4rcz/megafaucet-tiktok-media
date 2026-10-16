@@ -79,13 +79,14 @@ def main():
     baseinfo=stream_json(VIDEO)
     if not any(s["codec_type"]=="video" and s.get("width")==1080 and s.get("height")==1920 for s in baseinfo["streams"]):
         raise RuntimeError("Original master video not 1080x1920")
-    urls=json.loads(os.getenv("REGIONAL_RUNWAY_VOICES_JSON","{}"))
-    manifest={"campaign":CFG["campaign"],"source":CFG["source_video"],"audio_policy":"fresh speech-only neural master, no original audio, no time stretching; resample 48 kHz stereo AAC 192k, normalize -16 LUFS, -1.5dBTP ceiling","regions":{}}
+    # Produce regional native-accent voiceover directly on CI with zero-cost TTS.
+    manifest={"campaign":CFG["campaign"],"source":CFG["source_video"],"audio_policy":"fresh native-accent neural narration, no original audio/no time-stretch, 48kHz stereo AAC 192k, -16LUFS / -1.5dBTP","regions":{}}
     for key,reg in CFG["regions"].items():
         mp3=VOICE_DIR/f"{key}.mp3"
         if not mp3.exists():
-            if key not in urls:raise RuntimeError("Missing voice URL for "+key)
-            download(urls[key],mp3)
+            cmd=["edge-tts","--voice",reg["voice_name"],"--rate",reg.get("voice_rate","+0%"),"--text",reg["voice_text"],"--write-media",str(mp3)]
+            run(cmd,timeout=110)
+            if mp3.stat().st_size<3000:raise RuntimeError("TTS failed for "+key)
         info=stream_json(mp3)
         if not any(s["codec_type"]=="audio" for s in info["streams"]):
             raise RuntimeError("Broken audio for "+key)
