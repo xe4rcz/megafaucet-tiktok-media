@@ -94,5 +94,11 @@ jobs:
           git add media/drafts media/covers media/latest.json
           if ! git diff --cached --quiet; then
             git commit -m "Generate narrated website-video draft ${{ steps.limit.outputs.date }}"
-            git push
+            for retry in 1 2 3; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then exit 0; fi
+              sleep 3
+            done
+            echo "Failed to push after three attempts" >&2
+            exit 1
           fi
