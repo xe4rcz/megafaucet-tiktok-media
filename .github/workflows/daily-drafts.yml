@@ -2,16 +2,7 @@ name: Produce narrated TikTok drafts (REAL SITE)
 
 on:
   workflow_dispatch:
-  schedule:
-    # Weekdays, about 09:10 / 10:10 Kyiv depending on DST.
-    - cron: "10 7 * * 1-5"
-  push:
-    branches: [main]
-    paths:
-      - "reel_v2.py"
-      - "capture_site.py"
-      - "content/topics.json"
-      - ".github/workflows/daily-drafts.yml"
+  # Prior automated schedule is paused while higher-quality creative is reviewed.
 
 permissions:
   contents: write
