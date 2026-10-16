@@ -1,0 +1,15 @@
+{
+  "name": "megafaucet-remotion",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "render": "remotion render src/index.jsx MegaAd out/megafaucet-remotion.mp4 --codec h264 --crf 20 --concurrency 2"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.367",
+    "@remotion/google-fonts": "4.0.367",
+    "remotion": "4.0.367",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  }
+}
