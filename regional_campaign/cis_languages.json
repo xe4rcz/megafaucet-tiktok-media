@@ -1,0 +1,115 @@
+{
+  "campaign": "megafaucet_cis_multilang",
+  "source_video": "https://static.metricool.com/planner/202610/7471113-file-13111199316898970412.mp4",
+  "disclaimer": "Rewards vary; terms apply",
+  "regions": {
+    "kazakhstan-kk": {
+      "region": "Kazakhstan",
+      "language": "kk-KZ",
+      "title": "MegaFaucet — Қазақша",
+      "headlines": [
+        "MEGAFAUCET-ТІ ТАНЫҢЫЗ",
+        "ТӨЛЕМДЕР ТАРИХЫ",
+        "ЖЕКЕ КАБИНЕТ",
+        "ТАПСЫРМАЛАР",
+        "ҚАРАЖАТ ШЫҒАРУ",
+        "САЙТҚА КІРІҢІЗ"
+      ],
+      "subtitles": [
+        "Криптокран мен тапсырмалар.",
+        "Төлем ақпаратымен танысыңыз.",
+        "Жетістіктерді қадағалаңыз.",
+        "Ұсыныстарды қарап шығыңыз.",
+        "Талаптарды алдын ала тексеріңіз.",
+        "mega-faucet.click"
+      ],
+      "caption": "MegaFaucet платформасында криптокранды, тапсырмалар мен ұсыныстарды қарап шығыңыз. Төлемдер тарихын және қаражат шығару шарттарын тексеріңіз.\n🌐 mega-faucet.click\nТабысқа кепілдік берілмейді.\n#MegaFaucet #Қазақстан #Қазақша #Криптовалюта #CryptoFaucet",
+      "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=cis_multilang&utm_content=kazakhstan_kk",
+      "target_time_local": "19:30 Asia/Almaty",
+      "voice_name": "kk-KZ-AigulNeural",
+      "voice_rate": "+2%",
+      "voice_text": "MegaFaucet платформасында криптокран, тапсырмалар мен ұсыныстарды бір жерден таба аласыз. Жеке кабинет пен төлемдер тарихын қарап шығыңыз. Қаражат шығару шарттарын тексеріңіз. Сайт мекенжайы: мега фаусет нүкте клик. Табысқа кепілдік жоқ."
+    },
+    "uzbekistan-uz": {
+      "region": "Uzbekistan",
+      "language": "uz-UZ",
+      "title": "MegaFaucet — O‘zbekcha",
+      "headlines": [
+        "MEGAFAUCETNI KASHF ETING",
+        "TO‘LOVLAR TARIXI",
+        "SHAXSIY KABINET",
+        "VAZIFALAR VA TAKLIFLAR",
+        "PUL YECHISH",
+        "SAYTGA KIRING"
+      ],
+      "subtitles": [
+        "Kripto kran va vazifalarni ko‘ring.",
+        "To‘lov ma’lumotlarini tekshiring.",
+        "Hisobingizdagi ma’lumotlar.",
+        "Mavjud takliflarni ko‘ring.",
+        "Shartlarni diqqat bilan o‘qing.",
+        "mega-faucet.click"
+      ],
+      "caption": "MegaFaucet platformasida kripto kran, vazifalar va takliflarni ko‘ring. To‘lovlar tarixini va pul yechish shartlarini tekshiring.\n🌐 mega-faucet.click\nDaromad kafolatlanmaydi.\n#MegaFaucet #Ozbekiston #OZbekcha #Kriptovalyuta #CryptoFaucet",
+      "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=cis_multilang&utm_content=uzbekistan_uz",
+      "target_time_local": "19:30 Asia/Tashkent",
+      "voice_name": "uz-UZ-MadinaNeural",
+      "voice_rate": "+2%",
+      "voice_text": "MegaFaucet platformasida kripto kran, vazifalar va takliflarni bir joyda ko‘ring. Shaxsiy kabinetingiz va to‘lovlar tarixini tekshiring. Pul yechish shartlarini diqqat bilan o‘qing. Sayt: mega faucet nuqta klik. Daromad kafolatlanmaydi."
+    },
+    "azerbaijan-az": {
+      "region": "Azerbaijan",
+      "language": "az-AZ",
+      "title": "MegaFaucet — Azərbaycan dili",
+      "headlines": [
+        "MEGAFAUCET İLƏ TANIŞ OLUN",
+        "ÖDƏNİŞ TARİXÇƏSİ",
+        "HESAB PANELİ",
+        "TAPŞIRIQLAR VƏ TƏKLİFLƏR",
+        "PUL ÇIXARMA",
+        "SAYTA DAXİL OLUN"
+      ],
+      "subtitles": [
+        "Kripto kranı və tapşırıqlar.",
+        "Ödəniş məlumatlarına baxın.",
+        "Nəticələri izləyin.",
+        "Mövcud təklifləri araşdırın.",
+        "Şərtlərlə tanış olun.",
+        "mega-faucet.click"
+      ],
+      "caption": "MegaFaucet-də kripto kranı, tapşırıqları və təklifləri araşdırın. Ödəniş tarixçəsini və pul çıxarma şərtlərini yoxlayın.\n🌐 mega-faucet.click\nQazanc zəmanətli deyil.\n#MegaFaucet #Azerbaycan #Azərbaycan #Kriptovalyuta #CryptoFaucet",
+      "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=cis_multilang&utm_content=azerbaijan_az",
+      "target_time_local": "19:30 Asia/Baku",
+      "voice_name": "az-AZ-BanuNeural",
+      "voice_rate": "+2%",
+      "voice_text": "MegaFaucet platformasında kripto kranı, tapşırıqlar və təkliflər bir yerdədir. Hesab panelinə və ödəniş tarixçəsinə baxın. Pul çıxarma şərtlərini yoxlayın. Sayt: mega faucet nöqtə klik. Qazanc zəmanətli deyil."
+    },
+    "moldova-ro": {
+      "region": "Moldova",
+      "language": "ro-RO",
+      "title": "MegaFaucet — Română",
+      "headlines": [
+        "DESCOPERĂ MEGAFAUCET",
+        "ISTORICUL PLĂȚILOR",
+        "PANOU DE CONTROL",
+        "SARCINI ȘI OFERTE",
+        "RETRAGERI",
+        "VIZITEAZĂ SITE-UL"
+      ],
+      "subtitles": [
+        "Explorează activitățile disponibile.",
+        "Verifică informațiile publice.",
+        "Vezi progresul contului.",
+        "Alege ce ți se potrivește.",
+        "Consultă condițiile actuale.",
+        "mega-faucet.click"
+      ],
+      "caption": "Descoperă MegaFaucet: activități faucet, sarcini și oferte crypto într-un singur loc. Consultă istoricul plăților și condițiile de retragere.\n🌐 mega-faucet.click\nCâștigurile nu sunt garantate.\n#MegaFaucet #Moldova #Romana #Criptomonede #CryptoFaucet",
+      "landing_url": "https://mega-faucet.click/?utm_source=tiktok&utm_medium=organic&utm_campaign=cis_multilang&utm_content=moldova_ro",
+      "target_time_local": "19:30 Europe/Chisinau",
+      "voice_name": "ro-RO-AlinaNeural",
+      "voice_rate": "+2%",
+      "voice_text": "Descoperă MegaFaucet. Explorează activități faucet, sarcini și oferte crypto într-un singur loc. Verifică istoricul plăților, panoul de control și condițiile de retragere. Accesează mega faucet punct click. Câștigurile nu sunt garantate."
+    }
+  }
+}
