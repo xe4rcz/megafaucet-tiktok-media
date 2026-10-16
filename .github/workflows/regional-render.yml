@@ -1,0 +1,62 @@
+name: Render MegaFaucet regional videos (NO AUTO-PUBLISH)
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "regional_campaign/**"
+      - ".github/workflows/regional-render.yml"
+permissions:
+  contents: write
+concurrency:
+  group: megafaucet-regions-render
+  cancel-in-progress: false
+jobs:
+  produce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Install Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install software and native language fonts
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg fonts-noto-core fonts-noto-extra
+          python -m pip install --no-cache-dir 'pillow>=10,<12' edge-tts
+      - name: Render US, EU, India, Pakistan and CIS videos
+        run: |
+          python regional_campaign/build.py
+      - name: Verify five MP4 videos, audio and captions
+        run: |
+          python - <<'PY'
+          import json,pathlib
+          data=json.loads(pathlib.Path('media/regional/campaign_manifest.json').read_text())
+          assert len(data['regions'])==5
+          for key,row in data['regions'].items():
+              path=pathlib.Path(row['file'])
+              assert path.exists() and path.stat().st_size>400000
+              assert row['sample_rate_hz']==48000 and row['channels']==2
+              assert row['video_codec']=='h264' and row['audio_codec']=='aac'
+              assert row['voice_seconds']>=8
+              assert row['video_seconds']>row['voice_seconds']
+              print('QA OK',key,row['lang'],row['voice_seconds'],row['video_seconds'],path.stat().st_size)
+          print('NO TIKTOK POSTING IN THIS WORKFLOW')
+          PY
+      - name: Save regional videos and captions to GitHub
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/regional
+          if ! git diff --cached --quiet; then
+            git commit -m "Render 5 localized MegaFaucet video previews with audio mastering"
+            for attempt in 1 2 3; do
+              git pull --rebase origin main
+              if git push origin HEAD:main; then exit 0; fi
+              sleep 4
+            done
+            exit 1
+          fi
