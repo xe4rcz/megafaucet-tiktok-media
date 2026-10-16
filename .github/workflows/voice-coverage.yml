@@ -1,0 +1,28 @@
+name: Audit free TTS language coverage
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/voice-coverage.yml"
+permissions:
+  contents: read
+jobs:
+  voices:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Query exact voices supported by free neural speech
+        run: |
+          python -m pip install -q edge-tts
+          edge-tts --list-voices > /tmp/edge-voices.txt
+          echo "SUPPORTED TARGET LOCALES"
+          for lang in kk-KZ uz-UZ az-AZ hy-AM ky-KG tg-TJ be-BY ro-RO ka-GE tk-TM; do
+            echo "::group::${lang}"
+            (grep "${lang}-" /tmp/edge-voices.txt || true) | head -8
+            echo "::endgroup::"
+          done
