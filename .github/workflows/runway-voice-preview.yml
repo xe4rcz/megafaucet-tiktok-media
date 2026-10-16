@@ -1,0 +1,39 @@
+name: MegaFaucet promo with Runway voice
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [".github/workflows/runway-voice-preview.yml"]
+permissions:
+  contents: write
+concurrency:
+  group: megafaucet-runway-preview
+  cancel-in-progress: false
+jobs:
+  voice-and-video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install ffmpeg
+        run: sudo apt-get update -qq && sudo apt-get install -y ffmpeg
+      - name: Retrieve authorized narration
+        env:
+          VOICE_URL: "https://dnznrvs05pmza.cloudfront.net/text_to_speech/7261f19a-437f-49f8-b111-232fa573f424/MegaFaucet_TikTok_promo___free_voiceover.mp3?_jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJrZXlIYXNoIjoiYTQ1MmFjNDFiYjRmYzY4NCIsImJ1Y2tldCI6InJ1bndheS10YXNrLWFydGlmYWN0cyIsInN0YWdlIjoicHJvZCIsImV4cCI6MTc5MjMxMTg3M30.30uco0uu2QT7xNZ4sGwPAycBe25_HDBUQdd3P8hMbu0"
+        run: |
+          curl -fsSL --retry 3 "$VOICE_URL" -o /tmp/runway_voice.mp3
+          ffprobe -v error -show_entries stream=codec_name -of default=nw=1 /tmp/runway_voice.mp3
+      - name: Compose video with premium narration
+        run: |
+          mkdir -p media/studio
+          ffmpeg -hide_banner -loglevel error -y -i media/studio/studio-v3-preview.mp4 -i /tmp/runway_voice.mp3 -filter_complex "[1:a]adelay=200,apad=pad_dur=2,volume=1.20[a]" -map 0:v:0 -map "[a]" -c:v copy -c:a aac -b:a 192k -t 19.85 -movflags +faststart media/studio/megafaucet-runway-voice-final.mp4
+          test -s media/studio/megafaucet-runway-voice-final.mp4
+          ffprobe -v error -show_entries format=duration,size -of default=nw=1 media/studio/megafaucet-runway-voice-final.mp4
+      - name: Commit playable video
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add media/studio/megafaucet-runway-voice-final.mp4
+          git commit -m "Add narrated MegaFaucet promo using Runway audio"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && exit 0; sleep 2; done
+          exit 1
